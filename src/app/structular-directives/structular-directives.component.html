@@ -1,0 +1,32 @@
+<div class="border border-2 border-secondary">
+    <div class="bg-info text-center">two-way.component</div>
+
+    <div class="row mt-2 mb-2">
+        <div class="com">
+            <button class="btn btn-primary" (click)="toggleParagraph()">Toggle</button>
+        </div>
+        <div *ngIf="paragraphVisible" class="com">{{paragraph}}></div>
+    </div>
+
+    <div class="p-2"> 
+        <table class="table">
+            <thead class="table-info">
+                <tr>
+                    <td>#</td>
+                    <td>Firstname</td>
+                    <td>Lastname</td>
+                    <td>Age</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user1 of userData; index as i">
+                    <td>{{i+1}}</td>
+                    <td>{{user1.firstname }}</td>
+                    <td>{{user1.lastname }}</td>
+                    <td>{{user1.age }}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
